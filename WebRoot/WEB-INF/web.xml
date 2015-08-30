@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+		<servlet-name>smartstruts</servlet-name>
+		<servlet-class>org.smartstruts.action.ActionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>smartstruts</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- <servlet>
+    <servlet-name>CheckCode</servlet-name>
+    <servlet-class>com.tarena.action.CheckCodeAction</servlet-class>
+  </servlet> -->
+
+<!-- 
+  <servlet-mapping>
+    <servlet-name>CheckCode</servlet-name>
+    <url-pattern>/user/image</url-pattern>
+  </servlet-mapping>
+	 -->
+</web-app>

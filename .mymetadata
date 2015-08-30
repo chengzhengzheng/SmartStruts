@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SmartStruts"
+  id="myeclipse.1422065381937"
+  context-root="/SmartStruts"
+  j2ee-spec="6.0"
+  archive="SmartStruts.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

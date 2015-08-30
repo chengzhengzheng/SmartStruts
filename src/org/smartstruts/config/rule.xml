@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- 
+	解析XML文件、mapping规则：将XML文件中的
+	标签映射到java实体类的对应规范
+ -->
+<digester-rules>
+	<pattern value="struts-config">
+		<pattern value="form-beans/form-bean">
+			<object-create-rule classname="org.smartstruts.config.FormBeanConfig" />
+			<!-- addFormBeanConfig调用上一个对象的方法、 上一个是struts-config是最初压入栈的哪一个MoudleConfig对象 -->
+			<set-next-rule methodname="addFormBeanConfig" />
+			<set-properties-rule />
+		</pattern>
+
+		<pattern value="global-forwards/forward">
+			<object-create-rule
+				classname="org.smartstruts.config.ForwordConfig" />
+			<set-next-rule methodname="addForwardConfig" />
+			<set-properties-rule />
+		</pattern>
+
+		<pattern value="action-mappings/action">
+			<object-create-rule classname="org.smartstruts.config.ActionConfig" />
+			<set-next-rule methodname="addActionConfig" />
+			<set-properties-rule />
+
+			<pattern value="forward">
+				<object-create-rule classname="org.smartstruts.config.ForwordConfig" />
+				<set-next-rule methodname="addForwordConfig" />
+				<set-properties-rule />
+			</pattern>
+		</pattern>
+	</pattern>
+</digester-rules>

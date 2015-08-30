@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts-config>
+	<!-- 源代码：例子 -->
+	<form-beans>
+		<form-bean name="loginform" type="com.tarena.form.LoginForm" ></form-bean>
+	</form-beans>
+	<action-mappings>
+		<action path="/login" name="loginform" type="com.tarena.action.LoginAction" >
+			<forward name="success" path="/success.jsp"></forward>
+			<forward name="fail" path="/fail.jsp"></forward>
+		</action>
+	</action-mappings>
+	
+	<!-- <form-beans>
+		<form-bean name="checkCode" type="com.tarena.action.CheckCodeAction"></form-bean>
+	</form-beans>
+	<action-mappings>
+		<action path="/image" name="checkCode" type="com.tarena.action.CheckCodeAction">
+		</action>
+	</action-mappings> -->
+
+</struts-config>
